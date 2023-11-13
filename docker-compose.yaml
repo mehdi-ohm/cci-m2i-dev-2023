@@ -1,0 +1,11 @@
+version: '3'
+services:
+  currency-converter:
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "3081:3000"
+    restart: unless-stopped
+    environment:
+      - NODE_ENV=production
